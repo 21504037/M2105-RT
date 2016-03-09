@@ -14,7 +14,7 @@
                }
                return $resultat;
             }
-        echo fact(7);
+        echo fact(8);
         ?>
     </body>
 </html>
