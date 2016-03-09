@@ -1,3 +1,12 @@
+<?php
+    $colonne=0;
+    $ligne=0;
+    if (array_key_exists("colonne",$_POST)){
+        $colonne=$_POST["colonne"];
+        $ligne=$_POST["ligne"];
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,10 +19,10 @@
                 <fieldset style="vertical-align: middle;">
                     <legend>Création de tableau :</legend>
                     <label for="colonne">Colonne : </label>
-                    <input type="text" name="colonne" id="colonne">
+                    <input type="number" name="colonne" id="colonne" value="<?php echo $colonne?>">
                     <label for="ligne">Ligne : </label>
-                    <input type="text" name="ligne" id="ligne">
-                    <input type="submit" value="Valider">
+                    <input type="number" name="ligne" id="ligne" value="<?php echo $ligne?>">
+                    <input type="submit" value="Créatiion du tableau">
                 </fieldset>
             </form>
         </div>
@@ -40,9 +49,8 @@
                 echo "<table>";
             }
 
-            echo CreateHTMLTable(7,11);
-                
-                
+
+            echo CreateHTMLTable($colonne,$ligne);
         ?>
     </body>
 </html>
