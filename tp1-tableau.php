@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Variables</title>
+        <title>Tableau</title>
     </head>
     <body>
         <div>
