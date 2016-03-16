@@ -1,8 +1,7 @@
 <?php
-include("tp2_function.php");
-getHeader(False,"TP2");
+    include("tp2_function.php");
+    getHeader(False,"TP2");
+    echo $nom
 ?>
-
-
 
 

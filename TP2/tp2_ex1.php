@@ -7,5 +7,10 @@
             <input type="text" name="nom" id="nom">
         </form>
 <?php
+    $nom="";
+    if(array_key_exists("nom",$_POST)) {
+        $nom= $_POST["nom"];
+    }
+
     getFooter();
 ?>
