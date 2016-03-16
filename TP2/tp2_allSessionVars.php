@@ -1,7 +1,6 @@
 <?php
-session_start();
-foreach ($_SESSION as $k=>$v){
-echo $k."=>".$v."</br>";
-}
-
+    session_start();
+    foreach($_SESSION as $key=>$valeur){
+            echo $key."=>".$valeur."<br>";
+    }
 ?>
