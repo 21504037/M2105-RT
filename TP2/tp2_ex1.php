@@ -3,13 +3,13 @@
     getHeader("coucou","TP2");
 
     if(array_key_exists("nom",$_COOKIE)){
-        header("location: ex2_recoAuto.php");
+        header("location: tp2_recoAuto.php");
     }
     if(array_key_exists("nom",$_POST)) {
         $_SESSION["user"] = $_POST["nom"];
     }
-    if (array_key_exists("ckRemember",$_POST)){
-        setcookie("nom",$_POST["nom"],time()+5);
+    if (array_key_exists("ckremember",$_POST)){
+        setcookie("nom",$_POST["nom"],time()+5*60);
     }
 ?>
     <div class="container">
@@ -22,7 +22,7 @@
                     <input placeholder="Nom..." class="form-control" type="text" name="nom">
                     <input class="btn btn-primary" type="submit" value="Valider">
                     <hr/>
-                    <input type="checkbox" name="ckremember"> Mémoriser mes inofrmations de connexion
+                    <input type="checkbox" name="ckremember"> Mémoriser mes informations de connexion
                 </div>
             </fieldset>
 
