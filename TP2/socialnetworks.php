@@ -2,8 +2,8 @@
     include("tp2_function.php");
     getHeader("ok","Question 2");
 
-    if (isset ($_POST['socialnetwork'])){
-        $_SESSION['socialnetwork']=$_POST['socialnetwork'];
+    if (isset ($_POST['socialnetwork[]'])){
+        $_SESSION['socialnetwork[]']=$_POST['socialnetwork[]'];
     }
 ?>
 
@@ -31,8 +31,6 @@
 </div>
 
 <?php
-    foreach($_POST as $key=>$valeur){
-        echo "Le ou les réseau(x) sociau(x) que vous utilisez le plus est/sont ".$valeur."<br>";
-    }
+    var_dump($_POST);
     getFooter();
 ?>

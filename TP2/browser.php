@@ -35,7 +35,7 @@
 
 <?php
     foreach($_POST as $key=>$valeur){
-    echo "Votre navigateur préféré est ".$valeur."<br>";
-}
+        echo "Votre navigateur préféré est ".$valeur."<br>";
+    }
     getFooter();
 ?>
