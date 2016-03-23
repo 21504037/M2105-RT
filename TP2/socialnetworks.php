@@ -1,6 +1,6 @@
 <?php
     include("tp2_function.php");
-    getHeader("ok","Question 2");
+    getHeader(true,"Question 2");
 
     if (isset ($_POST['socialnetwork[]'])){
         $_SESSION['socialnetwork[]']=$_POST['socialnetwork[]'];

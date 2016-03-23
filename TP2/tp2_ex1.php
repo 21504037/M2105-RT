@@ -1,15 +1,17 @@
 <?php
     include("tp2_function.php");
-    getHeader("coucou","TP2");
+    getHeader(true,"TP2");
+
+    if(array_key_exists("nom",$_POST)) {
+        $_SESSION["user"] = $_POST["nom"];
+        if (array_key_exists("ckremember",$_POST)) {
+            setcookie("nom", $_POST["nom"], time() + 5*60);
+            header("location: tp2_recoAuto.php");
+        }
+    }
 
     if(array_key_exists("nom",$_COOKIE)){
         header("location: tp2_recoAuto.php");
-    }
-    if(array_key_exists("nom",$_POST)) {
-        $_SESSION["user"] = $_POST["nom"];
-    }
-    if (array_key_exists("ckremember",$_POST)){
-        setcookie("nom",$_POST["nom"],time()+5*60);
     }
 ?>
     <div class="container">

@@ -1,6 +1,6 @@
 <?php
     include("tp2_function.php");
-    getHeader("ok","Question 1");
+    getHeader(true,"Question 1");
 
     if (isset ($_POST['browser'])){
         $_SESSION['browser']=$_POST['browser'];
