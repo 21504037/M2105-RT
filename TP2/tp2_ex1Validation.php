@@ -5,7 +5,7 @@
 
     echo $nom;
 
-    getFooter;
+    getFooter();
 ?>
 
 
